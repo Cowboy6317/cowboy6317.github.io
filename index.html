@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="mode.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-4Zog8PeoOY75E27f/9jLhXN8PkHff1QvJNfNEq3NjWAZ99TLMvGn32n6CX9y6XWUa8s4J4sZzFEPZsDjn/pF8g==" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="dropdown">
+        <button class="dropbtn">Toggle Mode</button>
+        <div class="dropdown-content">
+          <a href="#" id="light-mode"><i class="fas fa-sun"></i>  Light Mode</a>
+          <a href="#" id="dark-mode"><i class="fas fa-moon"></i>  Dark Mode</a>
+        </div>
+      </div>      
+      <h1>To-do List</h1>
+      <label>
+        <input type="checkbox" id="toggle-autodelete" />
+        Autodelete Completed Items
+      </label>
+      <div class="add-todo">
+        <input type="text" id="new-todo" placeholder="Add New To-do" />
+        <button id="add-todo">Add</button>
+      </div>
+      <ul class="todo-list"></ul>
+      <div class="button-container">
+        <button id="select-all">Select All</button>
+        <button id="delete-selected">Delete Selected</button>
+        <button id="delete-all">Delete All</button>
+      </div>
+      <div class="popup">
+        <div class="popup-box">
+          <p>Are you sure you want to delete the selected items?</p>
+          <input type="checkbox" id="confirm-delete" />
+          <label for="confirm-delete">Yes, I am sure</label>
+          <br />
+          <button id="popup-ok">OK</button>
+          <button id="popup-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/30ac3ecf65.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+    <script src="mode.js"></script>
+  </body>
+</html>
